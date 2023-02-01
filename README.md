@@ -2,7 +2,7 @@
 
 ## Seção: `Metodologias Ágeis`
 
-- lore
+- Aqui continuamos a práticar mas em grupo aplicando colaboração e organização em grupo, para consolidar mais o uso do Redux que foi apresentado no bloco anterior.
 #
 <div align="center">
   <a href="https://davidrogger.github.io/trybe-project-frontend-online-store">
@@ -15,12 +15,12 @@
 >*clique na imagem para acesso online do projeto*
 #
 ## Projeto: `Trivia`
-- lore
+- Projeto é um jogo de multipla escolha, onde inicialmente é necessário logar com um nome, e um e-mail, esse email caso seja de uma conta existente do gravatar utiliza a mesma imagem de avatar da conta de lá! Ao logar é gerado um token de acesso e usando uma API gratuita, [Open Trivia](https://opentdb.com/), onde é fornecido 5 perguntas de multipla escolha de forma aleatória, essas perguntas possuem níveis de dificuldade e com base nesse nível e o tempo de resposta, é gerado uma pontuação que na conclusão é apresentado uma mensagem padrão com feedback do seu desempenho, com sua pontuação, fornecendo acesso ao ranking dos participantes.
 
 # Tecnologias e ferramentas usadas 🛠
 
 ![React.js](https://img.shields.io/badge/-React.js-61DAFB?style=flat-square&logo=react&logoColor=ffffff)
-
+![Redux](https://img.shields.io/badge/-Redux-7248b6?style=flat-square&logo=redux&logoColor=fff&textColor=black)
 
 # Desafios
 
