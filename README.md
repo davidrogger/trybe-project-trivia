@@ -15,7 +15,7 @@
 >*clique na imagem para acesso online do projeto*
 #
 ## Projeto: `Trivia`
-- Projeto é um jogo de multipla escolha, onde inicialmente é necessário logar com um nome, e um e-mail, esse email caso seja de uma conta existente do gravatar utiliza a mesma imagem de avatar da conta de lá! Ao logar é gerado um token de acesso e usando uma API gratuita, [Open Trivia](https://opentdb.com/), onde é fornecido 5 perguntas de multipla escolha de forma aleatória, essas perguntas possuem níveis de dificuldade e com base nesse nível e o tempo de resposta, é gerado uma pontuação que na conclusão é apresentado uma mensagem padrão com feedback do seu desempenho, com sua pontuação, fornecendo acesso ao ranking dos participantes.
+- Projeto é um jogo de multipla escolha, onde inicialmente é necessário logar com um nome, e um e-mail, esse email caso seja de uma conta existente do [gravatar](https://en.gravatar.com/) utiliza a mesma imagem de avatar dele! Ao logar é gerado um token de acesso para uma API gratuita, [Open Trivia](https://opentdb.com/), onde é fornecido 5 perguntas de multipla escolha de forma aleatória, essas perguntas possuem níveis de dificuldade e com base nesse nível e o tempo de resposta, é gerado uma pontuação que na conclusão é apresentado uma mensagem padrão com feedback do seu desempenho, com sua pontuação dando acesso ao ranking dos participantes.
 
 # Tecnologias e ferramentas usadas 🛠
 
