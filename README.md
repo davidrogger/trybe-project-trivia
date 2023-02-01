@@ -43,7 +43,24 @@
 ### Requisitos
 *Nome* | *Avaliação*
 --- | :---:
-1 - lore | :heavy_check_mark:
+1 - [TELA DE LOGIN] Crie a tela de login, onde a pessoa que joga deve preencher as informações para iniciar um jogo | :heavy_check_mark:
+2 - [TELA DE LOGIN] Crie o botão de iniciar o jogo | :heavy_check_mark:
+3 - [TELA DE LOGIN] Crie um botão na tela inicial que leve para a tela de configurações | :heavy_check_mark:
+4 - [TELA DE JOGO] Crie um header que deve conter as informações da pessoa jogadora | :heavy_check_mark:
+5 - [TELA DE JOGO] Crie a página de jogo que deve conter as informações relacionadas à pergunta | :heavy_check_mark:
+6 - [TELA DE JOGO] Desenvolva o jogo onde só deve ser possível escolher uma resposta correta por pergunta | :heavy_check_mark:
+7 - [TELA DE JOGO] Desenvolva o estilo que, ao clicar em uma resposta, a correta deve ficar verde e as incorretas, vermelhas | :heavy_check_mark:
+8 - [TELA DE JOGO] Desenvolva um timer onde a pessoa que joga tem 30 segundos para responder | :heavy_check_mark:
+9 - [TELA DE JOGO] Crie o placar com as seguintes características: | :heavy_check_mark:
+10 - [TELA DE JOGO] Crie um botão de "Next" que apareça após a resposta ser dada | :heavy_check_mark:
+11 - [TELA DE JOGO] Desenvolva o jogo de forma que a pessoa que joga deve responder 5 perguntas no total | :heavy_check_mark:
+12 - [TELA DE FEEDBACK] Desenvolva o header de feedback que deve conter as informações da pessoa jogadora | :heavy_check_mark:
+13 - [TELA DE FEEDBACK] Crie a mensagem de feedback para ser exibida a pessoa usuária | :heavy_check_mark:
+14 - [TELA DE FEEDBACK] Exiba as informações relacionadas aos resultados obtidos para a pessoa usuária | :heavy_check_mark:
+15 - [TELA DE FEEDBACK] Crie a opção para a pessoa jogadora poder jogar novamente | :heavy_check_mark:
+16 - [TELA DE FEEDBACK] Crie a opção para a pessoa jogadora poder visualizar a tela de ranking | :heavy_check_mark:
+17 - [TELA DE RANKING] Crie um botão para ir ao início | :heavy_check_mark:
+18 - [TELA DE RANKING] Crie o conteúdo da tela de ranking | :heavy_check_mark:
 
 
 </details>
