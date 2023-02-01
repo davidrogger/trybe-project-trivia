@@ -24,11 +24,14 @@
 
 # Desafios
 
-- lore
+- Como já havia desenvolvido uma aplicação anterior usando o Redux, os desafios nesse projeto foram mais de entender os testes automatizados do curso, e o trabalho em equipe.
+- Nesse grupo em particular, todos estavam com o foco muito parecido que inicialmente mal realizamos apresentação pessoal de cada integrante e fomos bem direto a leitura do readme, e botar a mão na massa, mas em uma segunda reunião ao final da noite, tive a ação de "pera vamos nós apresentar haha", foi bem engraçado, mas foi bem fluido, todos tinha um mindset parecido no desenvolvimento.
+- Tive feedbacks bem positivos nesse grupo de forma invidivual, me indicando como pessoa lider e criativa. E isso me motivou mais ainda na escolha que havia feito de iniciar nessa nova carreira, fiquei muito feliz com isso! E sou totalmente grato ao time pelo trabalho e aprendizado desse projeto!
 
 # Conclusão
 
-- lore
+- É sim importante ter uma reunião mais informal e entender melhor cada membro no começo do projeto, pare organizarmos melhor, e conhecermos as pessoas ao nosso redor! Não somo robos e não só estamos fazendo isso para ter uma renda, mas sim porque amamos o que estamos fazendo e aprendo!
+- Tivemos muitos desafios tecnicos nesse projeto e saimos vitoriosos!
 
 </details>
 
