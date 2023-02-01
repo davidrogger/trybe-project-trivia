@@ -30,7 +30,7 @@
 
 # Conclusão
 
-- É sim importante ter uma reunião mais informal e entender melhor cada membro no começo do projeto, pare organizarmos melhor, e conhecermos as pessoas ao nosso redor! Não somo robos e não só estamos fazendo isso para ter uma renda, mas sim porque amamos o que estamos fazendo e aprendo!
+- É sim importante ter uma reunião mais informal e entender melhor cada membro no começo do projeto, para organizarmos melhor e conhecermos as pessoas ao nosso redor! Não somos robos e não só estamos fazendo isso para ter uma renda um dia, mas sim porque amamos o que estamos fazendo e aprendendo!
 - Tivemos muitos desafios tecnicos nesse projeto e saimos vitoriosos!
 
 </details>
