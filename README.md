@@ -2,7 +2,7 @@
 
 ## Seção: `Metodologias Ágeis`
 
-- Aqui continuamos a práticar mas em grupo aplicando colaboração e organização em grupo, para consolidar mais o uso do Redux que foi apresentado no bloco anterior.
+- Essa seção foi focada ao projeto Trivia, para prática e consolidação do Redux, em equipe, usando os metodos ageis, colaboração e organização!
 #
 <div align="center">
   <a href="https://davidrogger.github.io/trybe-project-frontend-online-store">
