@@ -55,7 +55,6 @@ class Questions extends Component {
     const currentQuestion = results[indexPosition];
     const shuffleAnswer = scrambledAnswers[indexPosition];
     const renderQuestion = scrambledAnswers.length !== 0;
-    // const shuffleAnswer = this.shuffleAnswers(currentQuestion);
     return renderQuestion && (
       <div className="main-container">
         <QuestionCard

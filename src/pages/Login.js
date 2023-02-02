@@ -104,7 +104,6 @@ class Login extends Component {
               onClick={ this.playBtn }
             >
               { !login ? <Play size={ 20 } weight="fill" /> : <Loading />}
-              {/* <Play size={ 20 } weight="fill" /> */}
             </button>
             <button
               type="button"

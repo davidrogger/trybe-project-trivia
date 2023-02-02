@@ -18,18 +18,17 @@ export const getApiToken = () => async (dispatch) => {
     dispatch(actionGetToken(data));
     return data.token;
   } catch (error) {
-    console.log(`Erro encontrado Token API: ${error}`); // Provisório
+    console.log(`Erro encontrado Token API: ${error}`);
   }
 };
 
 export const getApiQuestions = async (token, quantity) => {
   try {
     const response = await fetch(`https://opentdb.com/api.php?amount=${quantity}&token=${token}`);
-    console.log(token);
     const data = await response.json();
     return data;
   } catch (error) {
-    console.log(`Erro encontrado Token API: ${error}`); // Provisório
+    console.log(`Erro encontrado Token API: ${error}`);
   }
 };
 
