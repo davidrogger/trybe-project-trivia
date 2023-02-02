@@ -6,8 +6,22 @@
 }
 
 .settings-forms {
+  align-items: center;
   background: var(--primary-bright-color);
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
   height: 500px;
-  width: 500px;
+  position: regular;
+  width: 350px;
+}
+
+.settings-forms h1 {
+  color: var(--secondary-bright-color);
+  margin: 10px;
+}
+
+.settings-ico {
+  position: absolute;
+  top: 425px;
 }
