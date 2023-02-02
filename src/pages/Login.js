@@ -8,6 +8,9 @@ import { fetchApiToken, getQuestions } from '../redux/actions/trivia';
 
 import logo from '../trivia.png';
 
+// Estilo
+import '../styles/login.css';
+
 class Login extends Component {
   constructor(props) {
     super(props);
@@ -64,9 +67,9 @@ class Login extends Component {
   render() {
     const { name, email, disableBtn } = this.state;
     return (
-      <header className="wrapper-container">
+      <div className="login-container">
         <img src={ logo } className="App-logo" alt="logo" />
-        <div className="login-container">
+        <div className="login-forms">
           <input
             type="text"
             name="name"
@@ -99,7 +102,7 @@ class Login extends Component {
             Settings
           </button>
         </div>
-      </header>
+      </div>
 
     );
   }

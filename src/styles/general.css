@@ -9,16 +9,6 @@ body {
   counter-reset: ranking;
 }
 
-.wrapper-container {
-  align-items: center;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  font-size: calc(10px + 2vmin);
-  justify-content: center;
-  min-height: 100vh;
-}
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
