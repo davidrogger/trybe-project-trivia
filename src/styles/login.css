@@ -54,8 +54,8 @@
 }
 
 .login-forms input:focus, .login-forms input:hover, .login-buttons button:enabled:hover {
-  border: 2.5px solid #9ecaed;
-  box-shadow: 0 0 2px white;
+  border: 2.5px solid var(--third-bright-color);
+  box-shadow: 0 0 3px var(--primary-bright-color);
   opacity: 1;
   outline: none;
 }
