@@ -5,12 +5,14 @@ import md5 from 'crypto-js/md5';
 import { connect } from 'react-redux';
 import { Play, Gear } from 'phosphor-react';
 import { actionGetPlayerData } from '../redux/actions';
-import { fetchApiToken, getQuestions } from '../redux/actions/trivia';
+import { getApiToken, getQuestions } from '../redux/actions/trivia';
 
 import logo from '../trivia.png';
 
 // Estilo
 import '../styles/login.css';
+
+import Loading from '../components/Loading';
 
 class Login extends Component {
   constructor(props) {
@@ -20,13 +22,8 @@ class Login extends Component {
       name: '',
       email: '',
       disableBtn: true,
+      login: false,
     };
-  }
-
-  componentDidUpdate() {
-    const { token, quantity, saveQuestions, questions, history } = this.props;
-    if (token && !questions.results) saveQuestions(token, quantity);
-    if (questions.results) history.push('/gameboard');
   }
 
   inputValidation = () => {
@@ -38,6 +35,12 @@ class Login extends Component {
 
     this.setState({
       disableBtn: !(emailTest && nameTest),
+    });
+  }
+
+  loadingBtn = (status) => {
+    this.setState({
+      login: status,
     });
   }
 
@@ -54,10 +57,16 @@ class Login extends Component {
     savePlayerData(name, emailHash);
   }
 
-  playBtn = () => {
-    const { tokenRequest } = this.props;
-    tokenRequest();
+  playBtn = async () => {
+    const {
+      getNewToken, savedToken, quantity, saveQuestions, history,
+    } = this.props;
+
+    this.loadingBtn(true);
+    await saveQuestions(savedToken || await getNewToken(), quantity);
     this.loadingPlayerData();
+    this.loadingBtn(false);
+    history.push('/gameboard');
   }
 
   settingsBtn = () => {
@@ -66,7 +75,7 @@ class Login extends Component {
   }
 
   render() {
-    const { name, email, disableBtn } = this.state;
+    const { name, email, disableBtn, login } = this.state;
     return (
       <div className="login-container">
         <img src={ logo } className="App-logo" alt="logo" />
@@ -94,7 +103,8 @@ class Login extends Component {
               disabled={ disableBtn }
               onClick={ this.playBtn }
             >
-              <Play size={ 20 } weight="fill" />
+              { !login ? <Play size={ 20 } weight="fill" /> : <Loading />}
+              {/* <Play size={ 20 } weight="fill" /> */}
             </button>
             <button
               type="button"
@@ -112,13 +122,13 @@ class Login extends Component {
 }
 
 const mapStateToProps = (state) => ({
-  token: state.token,
+  savedToken: state.token,
   quantity: state.settings.quantity,
   questions: state.questions.questionsData,
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  tokenRequest: () => dispatch(fetchApiToken()),
+  getNewToken: () => dispatch(getApiToken()),
   savePlayerData: (playerName, hash) => dispatch(actionGetPlayerData(playerName, hash)),
   saveQuestions: (token, quantity) => dispatch(getQuestions(token, quantity)),
 });

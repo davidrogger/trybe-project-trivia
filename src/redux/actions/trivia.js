@@ -11,19 +11,21 @@ export const actionGetQuestions = (data) => ({
   data,
 });
 
-export const fetchApiToken = () => async (dispatch) => {
+export const getApiToken = () => async (dispatch) => {
   try {
     const response = await fetch('https://opentdb.com/api_token.php?command=request');
     const data = await response.json();
     dispatch(actionGetToken(data));
+    return data.token;
   } catch (error) {
     console.log(`Erro encontrado Token API: ${error}`); // Provisório
   }
 };
 
-export const fetchApiTrivia = async (token, quantity) => {
+export const getApiQuestions = async (token, quantity) => {
   try {
     const response = await fetch(`https://opentdb.com/api.php?amount=${quantity}&token=${token}`);
+    console.log(token);
     const data = await response.json();
     return data;
   } catch (error) {
@@ -32,10 +34,6 @@ export const fetchApiTrivia = async (token, quantity) => {
 };
 
 export const getQuestions = (token, quantity) => async (dispatch) => {
-  // const RESPONSE_CODE = 3;
-  const questionsData = await fetchApiTrivia(token, quantity);
-  // if (questionsData.response_code === RESPONSE_CODE) {
-  //   const refreshToken = dispatch(fetchApiToken());
-  // }
-  dispatch(actionGetQuestions(questionsData));
+  const questions = await getApiQuestions(token, quantity);
+  dispatch(actionGetQuestions(questions));
 };

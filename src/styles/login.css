@@ -53,6 +53,10 @@
   width: 35px;
 }
 
+.login-buttons button:enabled:active {
+  cursor: wait;
+}
+
 .login-forms input:focus, .login-forms input:hover, .login-buttons button:enabled:hover {
   border: 2.5px solid var(--third-bright-color);
   box-shadow: 0 0 3px var(--primary-bright-color);
