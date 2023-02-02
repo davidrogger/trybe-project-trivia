@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import md5 from 'crypto-js/md5';
 
 import { connect } from 'react-redux';
+import { Play, Gear } from 'phosphor-react';
 import { actionGetPlayerData } from '../redux/actions';
 import { fetchApiToken, getQuestions } from '../redux/actions/trivia';
 
@@ -86,21 +87,23 @@ class Login extends Component {
             placeholder="Insert Player E-mail"
             onChange={ this.inputHandler }
           />
-          <button
-            type="button"
-            data-testid="btn-play"
-            disabled={ disableBtn }
-            onClick={ this.playBtn }
-          >
-            Play
-          </button>
-          <button
-            type="button"
-            data-testid="btn-settings"
-            onClick={ this.settingsBtn }
-          >
-            Settings
-          </button>
+          <div className="login-buttons">
+            <button
+              type="button"
+              data-testid="btn-play"
+              disabled={ disableBtn }
+              onClick={ this.playBtn }
+            >
+              <Play size={ 20 } weight="fill" />
+            </button>
+            <button
+              type="button"
+              data-testid="btn-settings"
+              onClick={ this.settingsBtn }
+            >
+              <Gear size={ 20 } weight="fill" />
+            </button>
+          </div>
         </div>
       </div>
 
