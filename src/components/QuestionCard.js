@@ -41,9 +41,6 @@ class QuestionCard extends Component {
   }
 
   answerHandler = (answer) => {
-    // this.setState({
-    //   clickedAnswer: true,
-    // });
     const { updateColor, correctAnswer } = this.props;
     updateColor(true);
     if (answer === 'correctAnswer') correctAnswer(answer);
@@ -51,7 +48,6 @@ class QuestionCard extends Component {
   }
 
   answers = (shuffleAnswer, correctAnswer, incorrectAnswers) => {
-    // const { clickedAnswer } = this.state;
     const { timer, clickedAnswer } = this.props;
     return (
       <div

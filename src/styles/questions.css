@@ -1,6 +1,6 @@
 .answers-standard-button, .correctAnswer, .incorretAnswer {
-  background-color: #3a4550;
-  border: 3px solid #3a4550;
+  background: var(--third-dark-color);
+  border: 3px solid var(--third-dark-color);
   border-radius: 8px;
   color: white;
   margin: 5px;
@@ -9,7 +9,7 @@
 
 button:disabled {
   cursor: not-allowed;
-  opacity: 80%;
+  opacity: 0.8;
 }
 
 .answers-container {
@@ -20,7 +20,7 @@ button:disabled {
 }
 
 .timer-container {
-  background-color: brown;
+  background: var(--secondary-bright-color);
   border-radius: 5px;
   color: white;
   display: flex;
@@ -31,15 +31,15 @@ button:disabled {
 }
 
 .correctAnswer {
-  border: 3px solid rgb(6, 240, 15);
+  border: 3px solid var(--correct-answer-border);
 }
 
 .incorretAnswer {
-  border: 3px solid red;
+  border: 3px solid var(--incorrect-answer-border);
 }
 
 .nextBtn {
-  background-color: brown;
+  background: var(--secondary-bright-color);
   border: none;
   border-radius: 5px;
   color: white;

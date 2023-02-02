@@ -4,19 +4,28 @@
   padding: 0;
 }
 
-body {
-  background-color: #282c34;
-  counter-reset: ranking;
+:root {
+
+  --primary-dark-color: #282c34;
+
+  --secondary-dark-color: #341f97;
+
+  --third-dark-color: #3a4550;
+
+  --primary-bright-color: #ecf0f1;
+
+  --secondary-bright-color: #a52a3a;
+
+  --third-bright-color: #9ecaed;
+
+  --correct-answer-border: #06f00f;
+
+  --incorrect-answer-border: #f01;
 }
 
-.wrapper-container {
-  align-items: center;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  font-size: calc(10px + 2vmin);
-  justify-content: center;
-  min-height: 100vh;
+body {
+  background: var(--primary-dark-color);
+  counter-reset: ranking;
 }
 
 .App-logo {
@@ -52,7 +61,7 @@ body {
 
 .headerplay-container {
   align-items: center;
-  background-color: #341f97;
+  background: var(--secondary-dark-color);
   color: white;
   display: flex;
   height: 50px;
@@ -67,22 +76,23 @@ body {
 
 .main-container {
   align-items: center;
-  background-color: #ecf0f1;
+  background: var(--primary-bright-color);
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   margin-top: 12px;
+  max-width: 500px;
   padding: 10px;
   text-align: center;
   width: 80%;
 }
 
 .main-container h2 {
-  color: brown;
+  color: var(--secondary-bright-color);
 }
 
 .main-container h1 {
-  color: #282c34;
+  color: var(--primary-dark-color);
   margin: 15px;
 }
 
@@ -92,8 +102,8 @@ body {
 }
 
 .general-buttons button {
-  background-color: #3a4550;
-  border: 3px solid #3a4550;
+  background: var(--third-dark-color);
+  border: 3px solid var(--third-dark-color);
   border-radius: 8px;
   color: white;
   margin: 5px;

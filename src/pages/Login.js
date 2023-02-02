@@ -3,10 +3,16 @@ import PropTypes from 'prop-types';
 import md5 from 'crypto-js/md5';
 
 import { connect } from 'react-redux';
+import { Play, Gear } from 'phosphor-react';
 import { actionGetPlayerData } from '../redux/actions';
-import { fetchApiToken, getQuestions } from '../redux/actions/trivia';
+import { getApiToken, getQuestions } from '../redux/actions/trivia';
 
 import logo from '../trivia.png';
+
+// Estilo
+import '../styles/login.css';
+
+import Loading from '../components/Loading';
 
 class Login extends Component {
   constructor(props) {
@@ -16,13 +22,8 @@ class Login extends Component {
       name: '',
       email: '',
       disableBtn: true,
+      login: false,
     };
-  }
-
-  componentDidUpdate() {
-    const { token, quantity, saveQuestions, questions, history } = this.props;
-    if (token && !questions.results) saveQuestions(token, quantity);
-    if (questions.results) history.push('/gameboard');
   }
 
   inputValidation = () => {
@@ -34,6 +35,12 @@ class Login extends Component {
 
     this.setState({
       disableBtn: !(emailTest && nameTest),
+    });
+  }
+
+  loadingBtn = (status) => {
+    this.setState({
+      login: status,
     });
   }
 
@@ -50,10 +57,16 @@ class Login extends Component {
     savePlayerData(name, emailHash);
   }
 
-  playBtn = () => {
-    const { tokenRequest } = this.props;
-    tokenRequest();
+  playBtn = async () => {
+    const {
+      getNewToken, savedToken, quantity, saveQuestions, history,
+    } = this.props;
+
+    this.loadingBtn(true);
+    await saveQuestions(savedToken || await getNewToken(), quantity);
     this.loadingPlayerData();
+    this.loadingBtn(false);
+    history.push('/gameboard');
   }
 
   settingsBtn = () => {
@@ -62,11 +75,11 @@ class Login extends Component {
   }
 
   render() {
-    const { name, email, disableBtn } = this.state;
+    const { name, email, disableBtn, login } = this.state;
     return (
-      <header className="wrapper-container">
+      <div className="login-container">
         <img src={ logo } className="App-logo" alt="logo" />
-        <div className="login-container">
+        <div className="login-forms">
           <input
             type="text"
             name="name"
@@ -83,36 +96,38 @@ class Login extends Component {
             placeholder="Insert Player E-mail"
             onChange={ this.inputHandler }
           />
-          <button
-            type="button"
-            data-testid="btn-play"
-            disabled={ disableBtn }
-            onClick={ this.playBtn }
-          >
-            Play
-          </button>
-          <button
-            type="button"
-            data-testid="btn-settings"
-            onClick={ this.settingsBtn }
-          >
-            Settings
-          </button>
+          <div className="login-buttons">
+            <button
+              type="button"
+              data-testid="btn-play"
+              disabled={ disableBtn }
+              onClick={ this.playBtn }
+            >
+              { !login ? <Play size={ 20 } weight="fill" /> : <Loading />}
+            </button>
+            <button
+              type="button"
+              data-testid="btn-settings"
+              onClick={ this.settingsBtn }
+            >
+              <Gear size={ 20 } weight="fill" />
+            </button>
+          </div>
         </div>
-      </header>
+      </div>
 
     );
   }
 }
 
 const mapStateToProps = (state) => ({
-  token: state.token,
+  savedToken: state.token,
   quantity: state.settings.quantity,
   questions: state.questions.questionsData,
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  tokenRequest: () => dispatch(fetchApiToken()),
+  getNewToken: () => dispatch(getApiToken()),
   savePlayerData: (playerName, hash) => dispatch(actionGetPlayerData(playerName, hash)),
   saveQuestions: (token, quantity) => dispatch(getQuestions(token, quantity)),
 });
