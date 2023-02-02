@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/trybe-project-trivia/static/css/main.4617fe6f.chunk.css",
+    "main.css": "/trybe-project-trivia/static/css/main.90f7d8a5.chunk.css",
     "main.js": "/trybe-project-trivia/static/js/main.e5001ad5.chunk.js",
     "main.js.map": "/trybe-project-trivia/static/js/main.e5001ad5.chunk.js.map",
     "runtime-main.js": "/trybe-project-trivia/static/js/runtime-main.c9f40b0c.js",
@@ -8,16 +8,16 @@
     "static/js/2.dbbf42ea.chunk.js": "/trybe-project-trivia/static/js/2.dbbf42ea.chunk.js",
     "static/js/2.dbbf42ea.chunk.js.map": "/trybe-project-trivia/static/js/2.dbbf42ea.chunk.js.map",
     "index.html": "/trybe-project-trivia/index.html",
-    "precache-manifest.f8b589f52398e0d00ecbfb39dcdb1fc4.js": "/trybe-project-trivia/precache-manifest.f8b589f52398e0d00ecbfb39dcdb1fc4.js",
+    "precache-manifest.8fdd53b3edd0df0429d456bbc00aa844.js": "/trybe-project-trivia/precache-manifest.8fdd53b3edd0df0429d456bbc00aa844.js",
     "service-worker.js": "/trybe-project-trivia/service-worker.js",
-    "static/css/main.4617fe6f.chunk.css.map": "/trybe-project-trivia/static/css/main.4617fe6f.chunk.css.map",
+    "static/css/main.90f7d8a5.chunk.css.map": "/trybe-project-trivia/static/css/main.90f7d8a5.chunk.css.map",
     "static/js/2.dbbf42ea.chunk.js.LICENSE.txt": "/trybe-project-trivia/static/js/2.dbbf42ea.chunk.js.LICENSE.txt",
     "static/media/trivia.png": "/trybe-project-trivia/static/media/trivia.466d153e.png"
   },
   "entrypoints": [
     "static/js/runtime-main.c9f40b0c.js",
     "static/js/2.dbbf42ea.chunk.js",
-    "static/css/main.4617fe6f.chunk.css",
+    "static/css/main.90f7d8a5.chunk.css",
     "static/js/main.e5001ad5.chunk.js"
   ]
 }
