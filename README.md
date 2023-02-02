@@ -5,7 +5,7 @@
 - Essa seção foi focada ao projeto Trívia, para prática e consolidação do Redux, em equipe, usando os métodos ágeis, colaboração e organização!
 #
 <div align="center">
-  <a href="https://davidrogger.github.io/trybe-project-frontend-online-store">
+  <a href="https://davidrogger.github.io/trybe-project-trivia">
     <img width="30%" src="./readme-imgs/project_trivia_top.webp">
     <img width="30%" src="./readme-imgs/project_trivia_mid.webp">
     <img width="30%" src="./readme-imgs/project_trivia_bottom.webp">
